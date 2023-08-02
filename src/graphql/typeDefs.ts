@@ -8,8 +8,10 @@ export const typeDefs = `
   # ROOT TYPE
   type Query {
     users: [User]
-    user(id: Int): User
+    user(id: ID!): User
   }
 
-
+  type Mutation {
+    createUser(id: ID!, username: String, password: String): User
+  }
 `;
