@@ -1,17 +1,22 @@
-export const typeDefs = `
+export const typeDefs = `#graphql
   type User {
     id: ID!
     username: String
+    email: String
     password: String
   }
 
+  input UserInput {
+      name: String!
+      email: String!
+      password: String!
+    }
   # ROOT TYPE
   type Query {
-    users: [User]
     user(id: ID!): User
   }
 
   type Mutation {
-    createUser(id: ID!, username: String, password: String): User
+    createUser(user: UserInput): User
   }
 `;

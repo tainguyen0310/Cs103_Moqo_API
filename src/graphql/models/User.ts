@@ -1,12 +1,10 @@
-export const users = [
-  {
-    id: 1,
-    username: 'user1',
-    password: '1234',
-  },
-  {
-    id: 2,
-    username: 'user2',
-    password: '5678',
-  },
-];
+import mongoose, { Schema } from "mongoose";
+
+const UserSchema = new Schema({
+  name: String,
+  email: String,
+  password: String,
+});
+
+const User = mongoose.model("User", UserSchema);
+export default User;
