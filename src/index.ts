@@ -13,7 +13,7 @@ const main = async () => {
   const httpServer = http.createServer(app);
 
   mongoose
-    .connect(process.env.MONGO_URI as string, {})
+    .connect(process.env.MONGO_URI as string)
     .then(() => console.log("MongoDB connected"))
     .catch((err) => console.error(err));
 

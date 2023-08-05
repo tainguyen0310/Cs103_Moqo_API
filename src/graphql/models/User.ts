@@ -1,6 +1,12 @@
 import mongoose, { Schema } from "mongoose";
 
-const UserSchema = new Schema({
+interface User {
+  name: String;
+  email: String;
+  password: String;
+}
+
+const UserSchema = new Schema<User>({
   name: String,
   email: String,
   password: String,
