@@ -5,6 +5,5 @@ declare global {
       }
     }
   }
-  
-  export {};
+export {};
   
