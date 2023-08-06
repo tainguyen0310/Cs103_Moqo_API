@@ -2,21 +2,24 @@
   "name": "cs103_moqo_api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon dist/index.js",
+    "watch": "tsc -w",
+    "dev": "concurrently \"npm run watch\" \"npm start\" ",
+    "test": "jest src"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@apollo/server": "^4.9.0",
     "bcrypt": "^5.1.0",
+    "concurrently": "^8.2.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "graphql": "^16.7.1",
     "mongoose": "^7.4.1",
-    "ts-node": "^10.9.1",
+    "nodemon": "^3.0.1",
     "typescript": "^5.1.6"
   },
   "devDependencies": {
