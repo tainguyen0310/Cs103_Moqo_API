@@ -3,14 +3,16 @@ export const typeDefs = `#graphql
     _id: ID!
     name: String!
     email: String!
+    phone: String!
     password: String!
   }
 
   input UserInput {
-    name: String!
-    email: String!
-    password: String!
-  }
+      name: String!
+      email: String!
+      phone: String!
+      password: String!
+    }
 
   input UpdateUserInput {
     name: String
