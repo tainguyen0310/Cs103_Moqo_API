@@ -1,5 +1,5 @@
 import { user } from "./queries";
-import { createUser,deleteUser,updateUser, login } from "./mutations";
+import { createUser, deleteUser, updateUser, login } from "./mutations";
 
 
 export const resolvers = {

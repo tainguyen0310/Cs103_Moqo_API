@@ -25,3 +25,5 @@ async function searchMovie(searchContent) {
     throw new Error('Error fetching movie data. Please try again later.');
   }
 }
+
+searchMovie('The Matrix');
