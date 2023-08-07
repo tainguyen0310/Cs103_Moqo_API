@@ -7,25 +7,30 @@ export const typeDefs = `#graphql
   }
 
   input UserInput {
-      name: String!
-      email: String!
-      password: String!
-    }
+    name: String!
+    email: String!
+    password: String!
+  }
+
   input UpdateUserInput {
-      name: String
-      email: String
-      password: String
-    }
+    name: String
+    email: String
+    password: String
+  }
+
   input DeleteUserInput {
-      email: String!
-    }
+    email: String!
+  }
+
   input LoginUserInput {
-      email: String!
-      password: String!
-    }
+    email: String!
+    password: String!
+  }
+
   input QueryUserInput {
-      email: String!
-    }
+    email: String!
+  }
+
   # ROOT TYPE
   type Query {
     user(user: QueryUserInput): User
