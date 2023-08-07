@@ -2,7 +2,7 @@ import User from "../models/User";
 import bcrypt from "bcrypt";
 // create a new user
 export const createUser = async (parent: any, args: any, context: any, info: any) => {    
-    const {name, email, password } = args.user;
+    const {name, email,phone, password } = args.user;
     try{
         const existingUser = await User.findOne({ email });
         if (existingUser) {
@@ -12,6 +12,7 @@ export const createUser = async (parent: any, args: any, context: any, info: any
         const newUser = await User.create({
             name,
             email,
+            phone,
             password: hashedPassword,
         })
         return newUser;
